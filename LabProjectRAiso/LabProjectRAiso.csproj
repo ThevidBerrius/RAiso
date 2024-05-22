@@ -92,6 +92,11 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factory\CartFactory.cs" />
+    <Compile Include="Factory\MsStationeryFactory.cs" />
+    <Compile Include="Factory\MsUserFactory.cs" />
+    <Compile Include="Factory\TransactionDetailFactory.cs" />
+    <Compile Include="Factory\TransactionHeaderFactory.cs" />
     <Compile Include="Model\Cart.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -142,7 +147,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controller\" />
-    <Folder Include="Factory\" />
     <Folder Include="Handler\" />
     <Folder Include="Repository\" />
     <Folder Include="Views\" />
