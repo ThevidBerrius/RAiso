@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Navbar.master.cs" Inherits="LabProjectRAiso.Views.MasterPage.Navbar" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>RAiso</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div>
+                <asp:Button ID="Button1" runat="server" Text="Home" />
+                <asp:Button ID="Button2" runat="server" Text="Button" />
+                <asp:Button ID="Button3" runat="server" Text="Button" />
+                <asp:Button ID="Button4" runat="server" Text="Button" />
+            </div>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
