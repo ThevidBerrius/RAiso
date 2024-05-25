@@ -15,22 +15,22 @@ namespace LabProjectRAiso.Views.Pages.Guest
     {
 
         /// <summary>
-        /// Lbl_Username control.
+        /// Lbl_Name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Lbl_Username;
+        protected global::System.Web.UI.WebControls.Label Lbl_Name;
 
         /// <summary>
-        /// TBox_Username control.
+        /// TBox_Name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TBox_Username;
+        protected global::System.Web.UI.WebControls.TextBox TBox_Name;
 
         /// <summary>
         /// Lbl_Password control.
@@ -49,6 +49,24 @@ namespace LabProjectRAiso.Views.Pages.Guest
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TBox_Password;
+
+        /// <summary>
+        /// CBox_Remember control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox CBox_Remember;
+
+        /// <summary>
+        /// Lbl_Remember control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Lbl_Remember;
 
         /// <summary>
         /// Lbl_Status control.

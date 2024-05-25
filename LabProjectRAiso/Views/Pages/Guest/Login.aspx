@@ -6,12 +6,16 @@
     <div>
         <h1>Login</h1>
         <div>
-            <asp:Label ID="Lbl_Username" runat="server" Text="Username"></asp:Label>
-            <asp:TextBox ID="TBox_Username" runat="server"></asp:TextBox>
+            <asp:Label ID="Lbl_Name" runat="server" Text="Name"></asp:Label>
+            <asp:TextBox ID="TBox_Name" runat="server"></asp:TextBox>
         </div>
         <div>
             <asp:Label ID="Lbl_Password" runat="server" Text="Password"></asp:Label>
             <asp:TextBox ID="TBox_Password" runat="server"></asp:TextBox>
+        </div>
+        <div>
+            <asp:CheckBox ID="CBox_Remember" runat="server" />
+            <asp:Label ID="Lbl_Remember" runat="server" Text="Remember Me"></asp:Label>
         </div>
         <div>
             <asp:Label ID="Lbl_Status" runat="server" Text=""></asp:Label>
