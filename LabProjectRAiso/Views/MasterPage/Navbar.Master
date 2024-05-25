@@ -12,10 +12,16 @@
     <form id="form1" runat="server">
         <div>
             <div>
-                <asp:Button ID="Button1" runat="server" Text="Home" />
-                <asp:Button ID="Button2" runat="server" Text="Button" />
-                <asp:Button ID="Button3" runat="server" Text="Button" />
-                <asp:Button ID="Button4" runat="server" Text="Button" />
+                <asp:Button ID="Btn_Home" runat="server" Text="Home" />
+                <asp:Button ID="Btn_Cart" runat="server" Text="Cart" />
+                <asp:Button ID="Btn_Transaction" runat="server" Text="Transaction" />
+                <asp:Button ID="Btn_Report" runat="server" Text="Transaction Report" />
+            </div>
+            <div>
+                <asp:Button ID="Btn_Login" runat="server" Text="Login" />
+                <asp:Button ID="Btn_Register" runat="server" Text="Register" />
+                <asp:Button ID="Btn_Profile" runat="server" Text="Update Profile" />
+                <asp:Button ID="Btn_Logout" runat="server" Text="Logout" />
             </div>
         </div>
         <div>
