@@ -2,6 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <h1>Update Cart</h1>
     <div>
         <asp:Label ID="Lbl_Name" runat="server" Text="Name: "></asp:Label>
         <asp:TextBox ID="TBox_Name" runat="server"></asp:TextBox>

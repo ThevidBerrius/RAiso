@@ -3,6 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div>
+        <h1>Home</h1>
         <div>
             <asp:GridView ID="GV_Stationery" runat="server">
                 <Columns>
