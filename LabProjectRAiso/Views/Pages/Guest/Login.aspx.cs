@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LabProjectRAiso.Controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +12,16 @@ namespace LabProjectRAiso.Views.Pages.Guest
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+        }
+
+        protected void Btn_Login_Click(object sender, EventArgs e)
+        {
+            string name = TBox_Name.Text;
+            string password = TBox_Password.Text;
+
+            Lbl_Status.Text = UserController.UsernameValidate(name);
+
 
         }
     }

@@ -20,6 +20,6 @@
         <div>
             <asp:Label ID="Lbl_Status" runat="server" Text=""></asp:Label>
         </div>
-        <asp:Button ID="Btn_Login" runat="server" Text="Login" />
+        <asp:Button ID="Btn_Login" runat="server" Text="Login"  OnClick="Btn_Login_Click"/>
     </div>
 </asp:Content>
