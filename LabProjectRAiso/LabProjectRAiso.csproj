@@ -90,6 +90,7 @@
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
     <Content Include="Views\Pages\Admin\InsertStationery.aspx" />
+    <Content Include="Views\Pages\Admin\UpdateStationery.aspx" />
     <Content Include="Views\Pages\Guest\Login.aspx" />
     <Content Include="Views\Pages\Guest\Register.aspx" />
     <Content Include="Views\Pages\Home.aspx" />
@@ -146,6 +147,13 @@
     </Compile>
     <Compile Include="Views\Pages\Admin\InsertStationery.aspx.designer.cs">
       <DependentUpon>InsertStationery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\Admin\UpdateStationery.aspx.cs">
+      <DependentUpon>UpdateStationery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Pages\Admin\UpdateStationery.aspx.designer.cs">
+      <DependentUpon>UpdateStationery.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Pages\Guest\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
