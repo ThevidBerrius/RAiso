@@ -10,7 +10,7 @@ namespace LabProjectRAiso.Factory
     {
         public static MsUser CreateMsUser(string UserName, string UserGender, DateTime UserDOB, string UserPhone, string UserAddress, string UserPassword, string UserRole)
         {
-            MsUser MsUser = new MsUser()
+            MsUser MsUser = new MsUser
             {
                 UserName = UserName,
                 UserGender = UserGender,

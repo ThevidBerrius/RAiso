@@ -15,8 +15,8 @@
         </div>
         <div>
             <asp:Label ID="Lbl_Gender" runat="server" Text="Gender"></asp:Label>
-            <asp:RadioButton ID="Radio_Male" runat="server" Text="Male"/>
-            <asp:RadioButton ID="Radio_Female" runat="server" Text="Female" />
+            <asp:RadioButton ID="Radio_Male" runat="server" Text="Male" GroupName="Gender"/>
+            <asp:RadioButton ID="Radio_Female" runat="server" Text="Female" GroupName="Gender"/>
         </div>
         <div>
             <asp:Label ID="Lbl_Address" runat="server" Text="Address"></asp:Label>

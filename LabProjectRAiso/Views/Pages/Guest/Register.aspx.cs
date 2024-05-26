@@ -19,17 +19,18 @@ namespace LabProjectRAiso.Views.Pages.Guest
         {
             string name = TBox_Name.Text;
             DateTime DOB = Calendar_DOB.SelectedDate;
-            string gender = (Radio_Male.Checked) ? "Male" : (Radio_Female.Checked) ? "Female" : "";
+            string gender = Radio_Male.Checked ? "Male" : Radio_Female.Checked ? "Female" : "";
             string address = TBox_Address.Text;
             string password = TBox_Password.Text;
             string phone = TBox_Phone.Text;
 
             Lbl_Status.Text  = UserController.RegisterValidation(name, DOB, gender, address, password, phone);
-            if(Lbl_Status.Text.Equals("Success"))
+            if (Lbl_Status.Text.Equals("Success"))
             {
                 UserController.InsertUser(name, DOB, gender, address, password, phone);
-                Response.Redirect("~/Views/Page/Home.aspx");
+                Response.Redirect("~/Views/Pages/Home.aspx");
             }
+
         }
     }
 }

@@ -150,12 +150,16 @@ namespace LabProjectRAiso.Controller
             {
                 message = RegisterPhoneValidate(phone);
             }
+            if (message == "")
+            {
+                message = UserHandler.RegisterHandler(name);
+            }
             return message;
         }
 
         public static void InsertUser(string username, DateTime DOB, string gender, string address, string password, string phone)
         {
-
+            UserHandler.InsertHandler(username, DOB, gender, address, password, phone);
         }
     }
 

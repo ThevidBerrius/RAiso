@@ -19,7 +19,7 @@ namespace LabProjectRAiso.Handler
         public static String RegisterHandler(String username)
         {
             MsUser user = UserRepository.GetUserByUsername(username);
-            return user != null ? "Success" : "Username already used";
+            return user == null ? "Success" : "Username already used";
         }
 
         public static void InsertHandler (String username, DateTime DOB, String gender, String address, String password, String phone)
