@@ -13,10 +13,10 @@ namespace LabProjectRAiso.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DatabaseEntities1 : DbContext
+    public partial class LocalDatabaseEntities : DbContext
     {
-        public DatabaseEntities1()
-            : base("name=DatabaseEntities1")
+        public LocalDatabaseEntities()
+            : base("name=LocalDatabaseEntities")
         {
         }
     
