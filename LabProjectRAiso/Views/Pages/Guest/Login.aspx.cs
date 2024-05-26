@@ -21,6 +21,10 @@ namespace LabProjectRAiso.Views.Pages.Guest
             string password = TBox_Password.Text;
 
             Lbl_Status.Text = UserController.LoginValidate(name, password);
+            if(Lbl_Status.Text == "Success")
+            {
+                Response.Redirect("~/Views/Pages/Home.aspx");
+            }
         }
     }
 }

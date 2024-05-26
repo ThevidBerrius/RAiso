@@ -132,13 +132,13 @@ namespace LabProjectRAiso.Views.Pages.Guest
         protected global::System.Web.UI.WebControls.TextBox TBox_Phone;
 
         /// <summary>
-        /// Lbl_Error control.
+        /// Lbl_Status control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Lbl_Error;
+        protected global::System.Web.UI.WebControls.Label Lbl_Status;
 
         /// <summary>
         /// Btn_Register control.

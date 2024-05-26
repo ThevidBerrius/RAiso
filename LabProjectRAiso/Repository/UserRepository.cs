@@ -17,5 +17,18 @@ namespace LabProjectRAiso.Repository
                     && x.UserPassword == password
                     select x).FirstOrDefault();
         }
+
+        public static MsUser GetUserByUsername(string username)
+        {
+            return (from x in db.MsUsers
+                    where x.UserName == username
+                    select x).FirstOrDefault();
+        }
+
+        public static void InsertUser(MsUser user)
+        {
+            db.MsUsers.Add(user);
+            db.SaveChanges();
+        }
     }
 }
