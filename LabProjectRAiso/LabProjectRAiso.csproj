@@ -91,6 +91,7 @@
     </Content>
     <Content Include="Views\Pages\Admin\InsertStationery.aspx" />
     <Content Include="Views\Pages\Admin\UpdateStationery.aspx" />
+    <Content Include="Views\Pages\Customer\CartPage.aspx" />
     <Content Include="Views\Pages\Guest\Login.aspx" />
     <Content Include="Views\Pages\Guest\Register.aspx" />
     <Content Include="Views\Pages\Home.aspx" />
@@ -155,6 +156,13 @@
     <Compile Include="Views\Pages\Admin\UpdateStationery.aspx.designer.cs">
       <DependentUpon>UpdateStationery.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Pages\Customer\CartPage.aspx.cs">
+      <DependentUpon>CartPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Pages\Customer\CartPage.aspx.designer.cs">
+      <DependentUpon>CartPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Pages\Guest\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -205,7 +213,6 @@
     <Folder Include="Controller\" />
     <Folder Include="Handler\" />
     <Folder Include="Repository\" />
-    <Folder Include="Views\Pages\Customer\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
