@@ -89,6 +89,7 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <Content Include="Views\Pages\Admin\InsertStationery.aspx" />
     <Content Include="Views\Pages\Guest\Login.aspx" />
     <Content Include="Views\Pages\Guest\Register.aspx" />
     <Content Include="Views\Pages\Home.aspx" />
@@ -138,6 +139,13 @@
     </Compile>
     <Compile Include="Views\MasterPage\Navbar.Master.designer.cs">
       <DependentUpon>Navbar.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\Admin\InsertStationery.aspx.cs">
+      <DependentUpon>InsertStationery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Pages\Admin\InsertStationery.aspx.designer.cs">
+      <DependentUpon>InsertStationery.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Pages\Guest\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -189,7 +197,6 @@
     <Folder Include="Controller\" />
     <Folder Include="Handler\" />
     <Folder Include="Repository\" />
-    <Folder Include="Views\Pages\Admin\" />
     <Folder Include="Views\Pages\Customer\" />
   </ItemGroup>
   <ItemGroup>

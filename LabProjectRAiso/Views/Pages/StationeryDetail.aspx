@@ -14,5 +14,4 @@
         <asp:Label ID="Lbl_Error" runat="server" Text=""></asp:Label>
         <asp:TextBox ID="TBox_Quantity" runat="server"></asp:TextBox>
         <asp:Button ID="Btn_Add" runat="server" Text="Add to Cart" />
-    </div>
 </asp:Content>
