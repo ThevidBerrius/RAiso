@@ -8,15 +8,15 @@ namespace LabProjectRAiso.Repository
 {
     public class DatabaseSingleton
     {
-        private static LocalDatabaseEntities instance;
+        private static LocalDatabaseEntities db  = null;
 
         public static LocalDatabaseEntities GetInstance()
         {
-            if (instance == null)
+            if (db == null)
             {
-                instance = new LocalDatabaseEntities();
+                db = new LocalDatabaseEntities();
             }
-            return instance;
+            return db;
         }
     }
 }

@@ -10,10 +10,10 @@ namespace LabProjectRAiso.Handler
 {
     public class UserHandler
     {
-        public static String LoginHandler(String username, String password)
+        public static String LoginHandler(String name, String password)
         {
-            MsUser user = UserRepository.GetUser(username, password);
-            return user != null ? "Success" : "Incorrect username or password!";
+            MsUser user = UserRepository.GetUser(name, password);
+            return user != null ? "" : "Username or Password is incorrect";
         }
 
         public static String RegisterHandler(String username)
@@ -27,5 +27,17 @@ namespace LabProjectRAiso.Handler
             MsUser user = MsUserFactory.CreateMsUser(username, gender, DOB, phone, address, password, "Customer");
             UserRepository.InsertUser(user);
         }
+
+        public static MsUser GetUserByUserName(String username)
+        {
+            MsUser user = UserRepository.GetUserByUserName(username);
+            return user;
+        }
+        public static String GetUserRole(String userID)
+        {
+            MsUser user = UserRepository.GetUserByUserId(userID);
+            return user.UserRole;
+        }
+
     }
 }

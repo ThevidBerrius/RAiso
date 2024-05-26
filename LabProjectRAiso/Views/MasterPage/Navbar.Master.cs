@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LabProjectRAiso.Controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,27 @@ namespace LabProjectRAiso.Views.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Request.Cookies["userCookie"] != null)
+            {
+                Session["user"] = Request.Cookies["userCookie"].Value;
+            }
+            if (Session["user"] != null)
+            {
+                String role = UserController.GetUserRole(Session["user"].ToString());
+                Btn_Login.Visible = false;
+                Btn_Register.Visible = false;
+                Btn_Profile.Visible = true;
+                Btn_Logout.Visible = true;
+                if (role.Equals("Admin"))
+                {
+                    Btn_Report.Visible = true;
+                }
+                else if (role.Equals("Customer"))
+                {
+                    Btn_Transaction.Visible = true;
+                    Btn_Cart.Visible = true;
+                }
+            }
         }
 
         protected void Btn_Home_Click(object sender, EventArgs e)
@@ -51,6 +72,14 @@ namespace LabProjectRAiso.Views.MasterPage
 
         protected void Btn_Logout_Click(object sender, EventArgs e)
         {
+            Session.Clear();
+            Session.Abandon();
+            if (Request.Cookies["userCookie"] != null)
+            {
+                var cookie = new HttpCookie("userCookie");
+                cookie.Expires = DateTime.Now.AddHours(-1);
+                Response.Cookies.Add(cookie);
+            }
             Response.Redirect("~/Views/Pages/Home.aspx");
         }
     }

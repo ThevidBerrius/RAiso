@@ -11,7 +11,7 @@ namespace LabProjectRAiso.Views.Pages.Guest
 {
 
 
-    public partial class WebForm1
+    public partial class Login
     {
 
         /// <summary>

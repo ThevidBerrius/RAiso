@@ -10,11 +10,11 @@ namespace LabProjectRAiso.Repository
     {
         private static LocalDatabaseEntities db = DatabaseSingleton.GetInstance();
 
-        public static MsUser GetUser(string username, string password)
+        public static MsUser GetUser(String name, String password)
         {
-            return (from x in db.MsUsers
-                    where x.UserName == username
-                    && x.UserPassword == password
+            return (from x in db.MsUsers 
+                    where x.UserName == name 
+                    && x.UserPassword == password 
                     select x).FirstOrDefault();
         }
 
@@ -29,6 +29,21 @@ namespace LabProjectRAiso.Repository
         {
             db.MsUsers.Add(user);
             db.SaveChanges();
+        }
+
+        public static MsUser GetUserByUserName(String username)
+        {
+            return (from x in db.MsUsers
+                    where x.UserName == username
+                    select x).FirstOrDefault();
+        }
+
+        public static MsUser GetUserByUserId(String userID)
+        {
+            int ID = Convert.ToInt32(userID);
+            return (from u in db.MsUsers
+                    where u.UserID == ID
+                    select u).FirstOrDefault();
         }
     }
 }

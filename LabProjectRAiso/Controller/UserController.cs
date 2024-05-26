@@ -1,4 +1,5 @@
 ﻿using LabProjectRAiso.Handler;
+using LabProjectRAiso.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,14 +30,14 @@ namespace LabProjectRAiso.Controller
             return message;
         }
 
-        public static String LoginValidate(string username, String password)
+        public static String LoginValidate(String username, String password)
         {
             string message = UsernameValidate(username);
             if(message == "")
             {
                 message = PasswordValidate(password);
             }
-           else if(message == "")
+           if(message == "")
             {
                 UserHandler.LoginHandler(username, password);
             }
@@ -160,6 +161,16 @@ namespace LabProjectRAiso.Controller
         public static void InsertUser(string username, DateTime DOB, string gender, string address, string password, string phone)
         {
             UserHandler.InsertHandler(username, DOB, gender, address, password, phone);
+        }
+
+        public static MsUser GetUserByUserName(String UserName)
+        {
+            return UserHandler.GetUserByUserName(UserName);
+        }
+
+        public static String GetUserRole(String userID)
+        {
+            return UserHandler.GetUserRole(userID);
         }
     }
 
