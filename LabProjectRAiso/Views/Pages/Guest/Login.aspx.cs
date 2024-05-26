@@ -20,9 +20,7 @@ namespace LabProjectRAiso.Views.Pages.Guest
             string name = TBox_Name.Text;
             string password = TBox_Password.Text;
 
-            Lbl_Status.Text = UserController.UsernameValidate(name);
-
-
+            Lbl_Status.Text = UserController.LoginValidate(name, password);
         }
     }
 }

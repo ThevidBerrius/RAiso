@@ -12,7 +12,7 @@ namespace LabProjectRAiso.Handler
         public static String LoginHandler(String username, String password)
         {
             MsUser user = UserRepository.GetUser(username, password);
-            return user != null ? "Login Success" : "Incorrect username or password!";
+            return user != null ? "Success" : "Incorrect username or password!";
         }
     }
 }
