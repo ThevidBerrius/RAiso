@@ -12,7 +12,10 @@ namespace LabProjectRAiso.Views.Pages.Guest
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["user"] != null || Request.Cookies["userCookie"] != null)
+            {
+                Response.Redirect("~/Views/Pages/Home.aspx");
+            }
         }
 
         protected void Btn_Register_Click(object sender, EventArgs e)

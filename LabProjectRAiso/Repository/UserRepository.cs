@@ -41,9 +41,9 @@ namespace LabProjectRAiso.Repository
         public static MsUser GetUserByUserId(String userID)
         {
             int ID = Convert.ToInt32(userID);
-            return (from u in db.MsUsers
-                    where u.UserID == ID
-                    select u).FirstOrDefault();
+            return (from x in db.MsUsers
+                    where x.UserID == ID
+                    select x).FirstOrDefault();
         }
     }
 }
