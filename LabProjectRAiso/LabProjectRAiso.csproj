@@ -92,6 +92,7 @@
     <Content Include="Views\Pages\Admin\InsertStationery.aspx" />
     <Content Include="Views\Pages\Admin\UpdateStationery.aspx" />
     <Content Include="Views\Pages\Customer\CartPage.aspx" />
+    <Content Include="Views\Pages\Customer\TransactionDetail.aspx" />
     <Content Include="Views\Pages\Customer\TransactionHistory.aspx" />
     <Content Include="Views\Pages\Customer\UpdateCart.aspx" />
     <Content Include="Views\Pages\Guest\Login.aspx" />
@@ -164,6 +165,13 @@
     </Compile>
     <Compile Include="Views\Pages\Customer\CartPage.aspx.designer.cs">
       <DependentUpon>CartPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\Customer\TransactionDetail.aspx.cs">
+      <DependentUpon>TransactionDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Pages\Customer\TransactionDetail.aspx.designer.cs">
+      <DependentUpon>TransactionDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Pages\Customer\TransactionHistory.aspx.cs">
       <DependentUpon>TransactionHistory.aspx</DependentUpon>
