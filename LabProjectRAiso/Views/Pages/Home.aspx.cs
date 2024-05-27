@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LabProjectRAiso.Controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,22 @@ namespace LabProjectRAiso.Views.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                if (Session["user"] != null)
+                {
+                    String UserRole = UserController.GetUserRole(Session["user"].ToString());
+                    if (UserRole.Equals("Admin"))
+                    {
+                        Btn_Insert.Visible = true;
+                    }
+                }
+            }
+        }
 
+        protected void Btn_Insert_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Views/Pages/Admin/InsertStationery.aspx");
         }
     }
 }

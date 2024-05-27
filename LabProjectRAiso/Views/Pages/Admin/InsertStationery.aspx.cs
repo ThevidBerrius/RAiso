@@ -12,7 +12,21 @@ namespace LabProjectRAiso.Views.Pages.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                if (Session["user"] != null)
+                {
+                    String UserRole = UserController.GetUserRole(Session["user"].ToString());
+                    if (!UserRole.Equals("Admin"))
+                    {
+                        Response.Redirect("~/Views/Pages/Home.aspx");
+                    }
+                }
+                else
+                {
+                    Response.Redirect("~/Views/Pages/Home.aspx");
+                }
+            }
         }
 
         protected void Btn_Insert_Click(object sender, EventArgs e)

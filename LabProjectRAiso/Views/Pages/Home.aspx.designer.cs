@@ -15,15 +15,6 @@ namespace LabProjectRAiso.Views.Pages
     {
 
         /// <summary>
-        /// GV_Stationery control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GV_Stationery;
-
-        /// <summary>
         /// Btn_Insert control.
         /// </summary>
         /// <remarks>
@@ -31,5 +22,14 @@ namespace LabProjectRAiso.Views.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Btn_Insert;
+
+        /// <summary>
+        /// GV_Stationery control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GV_Stationery;
     }
 }

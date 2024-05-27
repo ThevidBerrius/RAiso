@@ -28,12 +28,12 @@ namespace LabProjectRAiso.Views.Pages.Guest
             Lbl_Status.Text = UserController.LoginValidate(name, password);
             if(Lbl_Status.Text.Equals(""))
             {
-                MsUser u = UserController.GetUserByUserName(name);
-                Session["user"] = u.UserID;
+                MsUser User = UserController.GetUserByUserName(name);
+                Session["user"] = User.UserID;
                 if (isRemember)
                 {
                     HttpCookie cookie = new HttpCookie("userCookie");
-                    cookie.Value = u.UserID.ToString();
+                    cookie.Value = User.UserID.ToString();
                     cookie.Expires = DateTime.Now.AddHours(1);
 
                     Response.Cookies.Add(cookie);
