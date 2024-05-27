@@ -21,6 +21,13 @@ namespace LabProjectRAiso.Views.Pages.Admin
             string price  = TBox_Price.Text;
 
             Lbl_Error.Text =  StationeryController.InputValidate(name, price);
+            if(Lbl_Error.Text == "Success")
+            {
+                StationeryController.InsertStationery(name, Convert.ToInt32(price));
+                Lbl_Error.Text = "Insert Success";
+                TBox_Name.Text = "";
+                TBox_Price.Text = "";
+            }
         }
     }
 }

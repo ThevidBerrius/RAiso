@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LabProjectRAiso.Handler;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -47,6 +48,11 @@ namespace LabProjectRAiso.Controller
                 message = "Success";
             }
             return message;
+        }
+
+        public static void InsertStationery(String name, int price)
+        {
+            StationeryHandler.InsertHandler(name, price);
         }
     }
 }
