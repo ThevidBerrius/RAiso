@@ -1,4 +1,5 @@
 ﻿using LabProjectRAiso.Handler;
+using LabProjectRAiso.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -53,6 +54,11 @@ namespace LabProjectRAiso.Controller
         public static void InsertStationery(String name, int price)
         {
             StationeryHandler.InsertHandler(name, price);
+        }
+
+        public static List<MsStationery> GetStationeryList()
+        {
+            return StationeryHandler.GetStationeriesData();
         }
     }
 }

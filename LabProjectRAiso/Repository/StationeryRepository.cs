@@ -14,5 +14,10 @@ namespace LabProjectRAiso.Repository
             db.MsStationeries.Add(stationery);
             db.SaveChanges();
         }
+
+        public static List<MsStationery> GetAllStationery()
+        {
+            return (db.MsStationeries).ToList();
+        }
     }
 }

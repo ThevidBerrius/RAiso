@@ -15,5 +15,10 @@ namespace LabProjectRAiso.Handler
             MsStationery msStationery = MsStationeryFactory.CreateMsStationery(name, price);
             StationeryRepository.InsertStationery(msStationery);
         }
+
+        public static List<MsStationery> GetStationeriesData()
+        {
+            return StationeryRepository.GetAllStationery();
+        }
     }
 }
