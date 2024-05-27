@@ -1,6 +1,7 @@
 ﻿using LabProjectRAiso.Controller;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -19,10 +20,10 @@ namespace LabProjectRAiso.Views.Pages
                     String UserRole = UserController.GetUserRole(Session["user"].ToString());
                     if (UserRole.Equals("Admin"))
                     {
-                        GV_Stationery.Columns[1].Visible = true;
+                        GV_Stationery.Columns[3].Visible = true;
                         Btn_Insert.Visible = true;
                     }
-                    GetStationeryData();
+                    GVBind();
                 }
             }
         }
@@ -32,10 +33,19 @@ namespace LabProjectRAiso.Views.Pages
             Response.Redirect("~/Views/Pages/Admin/InsertStationery.aspx");
         }
 
-        private void GetStationeryData()
+        private void GVBind()
         {
             GV_Stationery.DataSource = StationeryController.GetStationeryList();
             GV_Stationery.DataBind();
+        }
+
+        protected void GV_Stationery_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            GridViewRow DeleteRow = GV_Stationery.Rows[e.RowIndex];
+            string stationeryID = StationeryController.GetIDByStationeryName(DeleteRow.Cells[0].Text).ToString();
+
+            StationeryController.DeleteStationery(Convert.ToInt32(stationeryID));
+            GVBind();
         }
     }
 }

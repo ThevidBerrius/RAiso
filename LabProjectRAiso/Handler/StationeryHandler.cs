@@ -20,5 +20,17 @@ namespace LabProjectRAiso.Handler
         {
             return StationeryRepository.GetAllStationery();
         }
+
+        public static int GetStationeryIDByName(String name)
+        {
+            MsStationery stationery = StationeryRepository.GetStationery(name);
+            return stationery.StationeryID;
+        }
+
+        public static void DeleteHandler(int id)
+        {
+            MsStationery stationery = StationeryRepository.FindStationery(id);
+            StationeryRepository.DeleteStationery(stationery);
+        }
     }
 }

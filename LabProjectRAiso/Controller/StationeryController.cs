@@ -60,5 +60,15 @@ namespace LabProjectRAiso.Controller
         {
             return StationeryHandler.GetStationeriesData();
         }
+
+        public static int GetIDByStationeryName(String name)
+        {
+            return StationeryHandler.GetStationeryIDByName(name);
+        }
+
+        public static void DeleteStationery(int id)
+        {
+            StationeryHandler.DeleteHandler(id);
+        }
     }
 }
