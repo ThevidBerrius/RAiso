@@ -54,5 +54,14 @@ namespace LabProjectRAiso.Views.Pages
             string stationeryID = StationeryController.GetIDByStationeryName(SelectRow.Cells[0].Text).ToString();
             Response.Redirect("~/Views/Pages/StationeryDetail.aspx?id=" + stationeryID); ;
         }
+
+        protected void GV_Stationery_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            GridViewRow editRow = GV_Stationery.Rows[e.NewEditIndex];
+            string stationeryID = StationeryController.GetIDByStationeryName(editRow.Cells[0].Text).ToString();
+
+            Response.Redirect("~/Views/Pages/Admin/UpdateStationery.aspx?id=" + stationeryID);
+            GVBind();
+        }
     }
 }
