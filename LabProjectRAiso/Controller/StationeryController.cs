@@ -75,5 +75,10 @@ namespace LabProjectRAiso.Controller
         {
             return StationeryHandler.GetStationeryByID(id);
         }
+
+        public static void UpdateStationery(String name, int price, String nameBeforeUpdated)
+        {
+            StationeryHandler.UpdateHandler(name, price, nameBeforeUpdated);
+        }
     }
 }

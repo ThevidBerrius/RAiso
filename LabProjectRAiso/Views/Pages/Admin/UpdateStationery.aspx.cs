@@ -11,6 +11,7 @@ namespace LabProjectRAiso.Views.Pages.Admin
 {
     public partial class UpdateStationery : System.Web.UI.Page
     {
+        static string nameBeforeUpdated;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -35,6 +36,7 @@ namespace LabProjectRAiso.Views.Pages.Admin
                 int id = Convert.ToInt32(Request["id"]);
                 MsStationery stationery = StationeryController.GetStationery(id);
 
+                nameBeforeUpdated = stationery.StationeryName;
                 TBox_Name.Text = stationery.StationeryName;
                 TBox_Price.Text = stationery.StationeryPrice.ToString();
                 
@@ -43,7 +45,15 @@ namespace LabProjectRAiso.Views.Pages.Admin
 
         protected void Btn_Insert_Click(object sender, EventArgs e)
         {
+            string name = TBox_Name.Text;
+            string price = TBox_Price.Text;
 
+            Lbl_Error.Text = StationeryController.InputValidate(name, price);
+            if (Lbl_Error.Text.Equals("Success"))
+            {
+                StationeryController.UpdateStationery(name, Convert.ToInt32(price), nameBeforeUpdated);
+                Response.Redirect("~/Views/Pages/Home.aspx");
+            }
         }
     }
 }

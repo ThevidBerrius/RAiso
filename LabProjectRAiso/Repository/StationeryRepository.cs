@@ -37,5 +37,12 @@ namespace LabProjectRAiso.Repository
             db.MsStationeries.Remove(stationery);
             db.SaveChanges();
         }
+
+        public static void UpdateStationery(MsStationery stationery, String name, int price)
+        {
+            stationery.StationeryName = name;
+            stationery.StationeryPrice = price;
+            db.SaveChanges();
+        }
     }
 }
