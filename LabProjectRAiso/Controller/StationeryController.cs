@@ -70,5 +70,10 @@ namespace LabProjectRAiso.Controller
         {
             StationeryHandler.DeleteHandler(id);
         }
+
+        public static MsStationery GetStationery(int id)
+        {
+            return StationeryHandler.GetStationeryByID(id);
+        }
     }
 }

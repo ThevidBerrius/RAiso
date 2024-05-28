@@ -32,5 +32,10 @@ namespace LabProjectRAiso.Handler
             MsStationery stationery = StationeryRepository.FindStationery(id);
             StationeryRepository.DeleteStationery(stationery);
         }
+
+        public static MsStationery GetStationeryByID(int id)
+        {
+            return StationeryRepository.FindStationery(id);
+        }
     }
 }

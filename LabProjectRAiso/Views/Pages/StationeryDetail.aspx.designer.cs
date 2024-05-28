@@ -24,13 +24,13 @@ namespace LabProjectRAiso.Views.Pages
         protected global::System.Web.UI.WebControls.Label Lbl_Name;
 
         /// <summary>
-        /// Lbl_NameText control.
+        /// TBox_Name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Lbl_NameText;
+        protected global::System.Web.UI.WebControls.TextBox TBox_Name;
 
         /// <summary>
         /// Lbl_Price control.
@@ -42,22 +42,13 @@ namespace LabProjectRAiso.Views.Pages
         protected global::System.Web.UI.WebControls.Label Lbl_Price;
 
         /// <summary>
-        /// Lbl_PriceText control.
+        /// TBox_Price control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Lbl_PriceText;
-
-        /// <summary>
-        /// Lbl_Error control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Lbl_Error;
+        protected global::System.Web.UI.WebControls.TextBox TBox_Price;
 
         /// <summary>
         /// TBox_Quantity control.
@@ -67,6 +58,15 @@ namespace LabProjectRAiso.Views.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TBox_Quantity;
+
+        /// <summary>
+        /// Lbl_Error control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Lbl_Error;
 
         /// <summary>
         /// Btn_Add control.

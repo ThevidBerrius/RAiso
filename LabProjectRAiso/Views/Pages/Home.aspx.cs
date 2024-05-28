@@ -47,5 +47,12 @@ namespace LabProjectRAiso.Views.Pages
             StationeryController.DeleteStationery(Convert.ToInt32(stationeryID));
             GVBind();
         }
+
+        protected void GV_Stationery_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GridViewRow SelectRow = GV_Stationery.SelectedRow;
+            string stationeryID = StationeryController.GetIDByStationeryName(SelectRow.Cells[0].Text).ToString();
+            Response.Redirect("~/Views/Pages/StationeryDetail.aspx?id=" + stationeryID); ;
+        }
     }
 }

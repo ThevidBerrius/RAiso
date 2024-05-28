@@ -7,14 +7,16 @@
         <h1>Stationery Detail</h1>
         <div>
             <asp:Label ID="Lbl_Name" runat="server" Text="Stationery Name: "></asp:Label>
-            <asp:Label ID="Lbl_NameText" runat="server" Text=""></asp:Label>
+            <asp:TextBox ID="TBox_Name" runat="server"></asp:TextBox>
         </div>
         <div>
             <asp:Label ID="Lbl_Price" runat="server" Text="Stationery Price: "></asp:Label>
-            <asp:Label ID="Lbl_PriceText" runat="server" Text=""></asp:Label>
+            <asp:TextBox ID="TBox_Price" runat="server"></asp:TextBox>
+        </div>
+        <div>
+            <asp:TextBox ID="TBox_Quantity" TextMode="Number" runat="server"></asp:TextBox>
         </div>
         <asp:Label ID="Lbl_Error" runat="server" Text=""></asp:Label>
-        <asp:TextBox ID="TBox_Quantity" runat="server"></asp:TextBox>
-        <asp:Button ID="Btn_Add" runat="server" Text="Add to Cart" />
+        <asp:Button ID="Btn_Add" runat="server" Text="Add to Cart" OnClick="Btn_Add_Click" />
     </div>
 </asp:Content>
