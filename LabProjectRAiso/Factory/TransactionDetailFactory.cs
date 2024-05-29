@@ -8,11 +8,10 @@ namespace LabProjectRAiso.Factory
 {
     public class TransactionDetailFactory
     {
-        public static TransactionDetail CreateTransactionDetail(int TransactionID, int StationeryID, int Quantity)
+        public static TransactionDetail CreateTransactionDetail(int StationeryID, int Quantity)
         {
             TransactionDetail transactionDetail = new TransactionDetail()
             {
-                TransactionID = TransactionID,
                 StationeryID = StationeryID,
                 Quantity = Quantity
             };

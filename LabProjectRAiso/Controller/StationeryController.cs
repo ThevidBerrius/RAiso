@@ -51,6 +51,20 @@ namespace LabProjectRAiso.Controller
             return message;
         }
 
+        public static String addToCartValidate(String input)
+        {
+            string message = "";
+            if(input == "")
+            {
+                message = "Quantity must be filled";
+            }
+            else if (Convert.ToInt32(input) <= 0)
+            {
+                message = "Quantity more than 0";
+            }
+            return message;
+        }
+
         public static void InsertStationery(String name, int price)
         {
             StationeryHandler.InsertHandler(name, price);

@@ -43,7 +43,22 @@ namespace LabProjectRAiso.Views.Pages
 
         protected void Btn_Add_Click(object sender, EventArgs e)
         {
+            Lbl_Error.Text = StationeryController.addToCartValidate(TBox_Quantity.Text);
+            Cart cart = CartController.GetCart(Convert.ToInt32(Session["user"]), Convert.ToInt32(Request["id"]));
+            if (cart != null)
+            {
+                Lbl_Error.Text = "Item already inserted to cart";
+            }
+            if(Lbl_Error.Text == "")
+            {
+                CartController.AddToCart(Convert.ToInt32(Session["user"]),
+                                         Convert.ToInt32(Request["id"]),
+                                         Convert.ToInt32(TBox_Quantity.Text));
 
+                Lbl_Error.Text = "Succes Add to Cart";
+                TBox_Quantity.Text = "";
+            }
+            
         }
     }
 }
