@@ -36,5 +36,17 @@ namespace LabProjectRAiso.Views.Pages.Customer
                 }
             }
         }
+
+        protected void Btn_Update_Click(object sender, EventArgs e)
+        {
+            Lbl_Error.Text = StationeryController.addToCartValidate(TBox_Quantity.Text);
+            if(Lbl_Error.Text == "")
+            {
+                Cart cart = CartController.GetCart(Convert.ToInt32(Session["user"]), Convert.ToInt32(Request["stationeryID"]));
+                CartController.UpdateCart(cart, Convert.ToInt32(TBox_Quantity.Text));
+                Lbl_Error.Text = "Success Update Cart";
+                TBox_Quantity.Text = "";
+            }
+        }
     }
 }

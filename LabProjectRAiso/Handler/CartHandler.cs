@@ -25,5 +25,10 @@ namespace LabProjectRAiso.Handler
         {
             return CartRepository.GetCart(userID, stationeryID);
         }
+
+        public static void UpdateHandler(Cart cart, int quantity)
+        {
+            CartRepository.UpdateCart(cart, quantity);
+        }
     }
 }

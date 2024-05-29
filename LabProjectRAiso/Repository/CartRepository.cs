@@ -30,5 +30,11 @@ namespace LabProjectRAiso.Repository
                     && x.StationeryID == stationeryID
                     select x).FirstOrDefault();
         }
+
+        public static void UpdateCart(Cart cart, int quantity)
+        {
+            cart.Quantity = quantity;
+            db.SaveChanges();
+        }
     }
 }
