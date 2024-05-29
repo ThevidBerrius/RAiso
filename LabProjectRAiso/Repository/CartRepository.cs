@@ -36,5 +36,18 @@ namespace LabProjectRAiso.Repository
             cart.Quantity = quantity;
             db.SaveChanges();
         }
+
+        public static void DeleteCart(Cart cart)
+        {
+            db.Carts.Remove(cart);
+            db.SaveChanges();
+        }
+
+        public static List<Cart> GetCartByStationeryID(int stationeryID)
+        {
+            return (from x in db.Carts
+                    where x.StationeryID == stationeryID
+                    select x).ToList();
+        }
     }
 }

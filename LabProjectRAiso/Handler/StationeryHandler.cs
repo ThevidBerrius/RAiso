@@ -30,6 +30,11 @@ namespace LabProjectRAiso.Handler
         public static void DeleteHandler(int id)
         {
             MsStationery stationery = StationeryRepository.FindStationery(id);
+            List<Cart> cart = CartRepository.GetCartByStationeryID(id);
+            foreach (Cart carts in cart)
+            {
+                CartRepository.DeleteCart(carts);
+            }
             StationeryRepository.DeleteStationery(stationery);
         }
 
