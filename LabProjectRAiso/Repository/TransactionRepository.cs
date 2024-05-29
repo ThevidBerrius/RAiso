@@ -31,5 +31,12 @@ namespace LabProjectRAiso.Repository
                     where x.TransactionID == transactionID
                     select x).FirstOrDefault();
         }
+
+        public static void InsertTransaction(TransactionHeader header, TransactionDetail detail)
+        {
+            db.TransactionHeaders.Add(header);
+            db.TransactionDetails.Add(detail);
+            db.SaveChanges();
+        }
     }
 }

@@ -8,11 +8,10 @@ namespace LabProjectRAiso.Factory
 {
     public class TransactionHeaderFactory
     {
-        public static TransactionHeader CreateTransactionHeader(int TransactionID, int UserID, DateTime TransactionDate)
+        public static TransactionHeader CreateTransactionHeader(int UserID, DateTime TransactionDate)
         {
             TransactionHeader transactionHeader = new TransactionHeader()
             {
-                TransactionID = TransactionID,
                 UserID = UserID,
                 TransactionDate = TransactionDate
             };

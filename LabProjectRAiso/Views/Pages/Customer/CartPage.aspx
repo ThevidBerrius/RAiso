@@ -11,7 +11,7 @@
                     <asp:BoundField DataField="StationeryName" HeaderText="Name" SortExpression="StationeryName" />
                     <asp:BoundField DataField="StationeryPrice" HeaderText="Price" SortExpression="StationeryPrice" />
                     <asp:BoundField DataField="Quantity" HeaderText="Quantity" SortExpression="Quantity" />
-                    <asp:TemplateField HeaderText="Action">
+                    <asp:TemplateField HeaderText="Actions">
                         <ItemTemplate>
                             <asp:Button ID="Btn_Update" runat="server" Text="Update" OnClick="Btn_Update_Click" />
                             <asp:Button ID="Btn_Delete" runat="server" Text="Delete" OnClick="Btn_Delete_Click" />

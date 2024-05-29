@@ -33,5 +33,10 @@ namespace LabProjectRAiso.Controller
         {
             CartHandler.DeleteHandler(cart);
         }
+
+        public static void CheckoutItem(List<Cart> cart)
+        {
+            TransactionsHandler.CheckoutItem(cart);
+        }
     }
 }

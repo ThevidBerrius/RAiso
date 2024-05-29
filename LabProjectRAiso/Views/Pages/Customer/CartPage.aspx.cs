@@ -80,7 +80,13 @@ namespace LabProjectRAiso.Views.Pages.Customer
 
         protected void Btn_Checkout_Click(object sender, EventArgs e)
         {
-
+            List<Cart> carts = CartController.GetCarts(Convert.ToInt32(Session["user"]));
+            CartController.CheckoutItem(carts);
+            foreach (Cart cart in carts)
+            {
+                CartController.DeleteCart(cart);
+            }
+            Response.Redirect("~/Views/Pages/Home.aspx");
         }
     }
 }
