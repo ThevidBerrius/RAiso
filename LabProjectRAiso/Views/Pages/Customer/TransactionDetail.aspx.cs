@@ -33,6 +33,11 @@ namespace LabProjectRAiso.Views.Pages.Customer
                                 Response.Redirect("~/Views/Pages/Home.aspx");
                             }
 
+                            LabProjectRAiso.Model.TransactionDetail modelDetail = TransactionController.GetDetail(transactionID);
+                            TBox_Name.Text = modelDetail.MsStationery.StationeryName;
+                            TBox_Price.Text = modelDetail.MsStationery.StationeryPrice.ToString();
+                            TBox_Quantity.Text = modelDetail.Quantity.ToString();
+
                         }
                     }
                 }

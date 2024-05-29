@@ -51,6 +51,11 @@ namespace LabProjectRAiso.Views.Pages.Customer
 
         protected void Btn_Detail_Click(object sender, EventArgs e)
         {
+            Button button = (Button)sender;
+            GridViewRow detailRow = (GridViewRow)button.NamingContainer;
+            string transactionID = detailRow.Cells[0].Text;
+
+            Response.Redirect("~/Views/Pages/Customer/TransactionDetail.aspx?id=" + transactionID);
 
         }
     }
