@@ -39,5 +39,11 @@ namespace LabProjectRAiso.Handler
             return user.UserRole;
         }
 
+        public static MsUser GetUserByID(String userID)
+        {
+            MsUser user = UserRepository.GetUserByUserId(userID);
+            return user;
+        }
+
     }
 }

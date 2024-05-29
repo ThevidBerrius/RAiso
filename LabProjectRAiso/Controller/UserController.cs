@@ -172,6 +172,11 @@ namespace LabProjectRAiso.Controller
         {
             return UserHandler.GetUserRole(userID);
         }
+
+        public static MsUser GetUserByID(String UserID)
+        {
+            return UserHandler.GetUserByID(UserID);
+        }
     }
 
 

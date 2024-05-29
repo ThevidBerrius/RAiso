@@ -66,7 +66,16 @@ namespace LabProjectRAiso.Views.Pages.Customer
 
         protected void Btn_Delete_Click(object sender, EventArgs e)
         {
+            Button button = (Button)sender;
+            GridViewRow DeleteRow = (GridViewRow)button.NamingContainer;
+            string name = DeleteRow.Cells[0].Text;
 
+            int userID = Convert.ToInt32(Session["user"]);
+            int stationeryID = StationeryController.GetIDByStationeryName(name);
+
+            Cart cart = CartController.GetCart(Convert.ToInt32(Session["user"]), stationeryID);
+            CartController.DeleteCart(cart);
+            GVBind();
         }
 
         protected void Btn_Checkout_Click(object sender, EventArgs e)

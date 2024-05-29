@@ -30,5 +30,10 @@ namespace LabProjectRAiso.Handler
         {
             CartRepository.UpdateCart(cart, quantity);
         }
+
+        public static void DeleteHandler(Cart cart)
+        {
+            CartRepository.DeleteCart(cart);
+        }
     }
 }

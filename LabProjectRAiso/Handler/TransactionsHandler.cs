@@ -7,7 +7,7 @@ using System.Web;
 
 namespace LabProjectRAiso.Handler
 {
-    public class TransactionHandler
+    public class TransactionsHandler
     {
         public static List<TransactionHeader> GetAllHeader(int userID)
         {
