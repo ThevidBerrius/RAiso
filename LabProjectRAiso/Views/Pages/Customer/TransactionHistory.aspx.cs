@@ -27,6 +27,7 @@ namespace LabProjectRAiso.Views.Pages.Customer
                 {
                     Response.Redirect("~/Views/Pages/Home.aspx");
                 }
+                GVBind();
             }
         }
 
