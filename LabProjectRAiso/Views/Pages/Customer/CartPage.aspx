@@ -20,6 +20,6 @@
                 </Columns>
             </asp:GridView>
         </div>
-        <asp:Button ID="Btn_Checkout" runat="server" Text="Checkout" />
+        <asp:Button ID="Btn_Checkout" runat="server" Text="Checkout" OnClick="Btn_Checkout_Click" />
     </div>
 </asp:Content>

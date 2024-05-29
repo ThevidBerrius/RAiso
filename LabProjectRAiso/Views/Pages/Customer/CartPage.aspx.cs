@@ -55,10 +55,21 @@ namespace LabProjectRAiso.Views.Pages.Customer
 
         protected void Btn_Update_Click(object sender, EventArgs e)
         {
+            Button button = (Button)sender;
+            GridViewRow updateRow = (GridViewRow)button.NamingContainer;
+            string name  = updateRow.Cells[0].Text;
 
+            int userID = Convert.ToInt32(Session["user"]);
+            int stationeryID = StationeryController.GetIDByStationeryName(name);
+            Response.Redirect("~/Views/Pages/Customer/UpdateCart.aspx?stationeryID=" + stationeryID);
         }
 
         protected void Btn_Delete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Btn_Checkout_Click(object sender, EventArgs e)
         {
 
         }

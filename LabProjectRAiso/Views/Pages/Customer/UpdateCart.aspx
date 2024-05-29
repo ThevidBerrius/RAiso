@@ -13,7 +13,7 @@
     </div>
     <div>
         <asp:Label ID="Lbl_Quantity" runat="server" Text="Quantity: "></asp:Label>
-        <asp:TextBox ID="TBox_Quantity" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TBox_Quantity" runat="server" TextMode="Number"></asp:TextBox>
     </div>
     <asp:Label ID="Lbl_Error" runat="server" Text=""></asp:Label>
     <asp:Button ID="Btn_Update" runat="server" Text="Update" />

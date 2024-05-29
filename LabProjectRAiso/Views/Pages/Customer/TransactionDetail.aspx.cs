@@ -13,7 +13,7 @@ namespace LabProjectRAiso.Views.Pages.Customer
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-=
+
         }
     }
 }
