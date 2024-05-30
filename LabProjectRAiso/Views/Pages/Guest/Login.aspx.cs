@@ -26,7 +26,7 @@ namespace LabProjectRAiso.Views.Pages.Guest
             Boolean isRemember = CBox_Remember.Checked;
 
             Lbl_Status.Text = UserController.LoginValidate(name, password);
-            if(Lbl_Status.Text.Equals(""))
+            if(Lbl_Status.Text.Equals("Success"))
             {
                 MsUser User = UserController.GetUserByUserName(name);
                 Session["user"] = User.UserID;

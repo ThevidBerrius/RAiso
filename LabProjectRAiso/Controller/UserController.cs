@@ -37,9 +37,9 @@ namespace LabProjectRAiso.Controller
             {
                 message = PasswordValidate(password);
             }
-           if(message == "")
+            if(message == "")
             {
-                UserHandler.LoginHandler(username, password);
+                message = UserHandler.LoginHandler(username, password);
             }
             return message;
         }
@@ -58,28 +58,16 @@ namespace LabProjectRAiso.Controller
             return message;
         }
 
-        public static String RegisterDOBValidate(DateTime DOB)
+        public static String RegisterDOBValidate(String DOB)
         {
             string message = "";
-            if(DOB == DateTime.MinValue)
+            if(DOB == "")
             {
-                message = "Date of Birth is required";
+                message = "Date Of Birth Must Be Filled";
             }
-            else
+            else if ((DateTime.Now - DateTime.Parse(DOB)).TotalDays < 365)
             {
-                if (DOB == DateTime.Now)
-                {
-                    message = "Date of birth cannot be in the future :D";
-                }
-                else
-                {
-                    int age = DateTime.Now.Year - DOB.Year;
-                    if (DOB > DateTime.Now.AddYears(-age)) age--;
-                    if (age < 1)
-                    {
-                        message = "You must be at least 1 year old";
-                    }
-                }
+                message = "User must be at least 1 year";
             }
             return message;
         }
@@ -128,7 +116,7 @@ namespace LabProjectRAiso.Controller
             return message;
         }
 
-        public static String RegisterValidation(string name, DateTime DOB, string gender, string address, string password, string phone)
+        public static String RegisterValidation(string name, String DOB, string gender, string address, string password, string phone)
         {
            string message = RegisterUsernameValidate(name);
             if(message == "")
@@ -176,6 +164,42 @@ namespace LabProjectRAiso.Controller
         public static MsUser GetUserByID(String UserID)
         {
             return UserHandler.GetUserByID(UserID);
+        }
+
+        public static String UpdateValidate(String UserName, String DOB, String gender, String address, String password, String phone, String nameBeforeUpdate)
+        {
+            string message = RegisterUsernameValidate(UserName);
+
+            if(message == "")
+            {
+                message = RegisterDOBValidate(DOB);
+            }
+            if(message == "")
+            {
+                message = RegisterGenderValidate(gender);
+            }
+            if(message == "")
+            {
+                message = RegisterAddressValidate(address);
+            }
+            if(message == "")
+            {
+                message = RegisterPasswordValidate(password);
+            }
+            if (message == "")
+            {
+                message = RegisterPhoneValidate(phone);
+            }
+            if (message == "")
+            {
+                message = UserHandler.UpdateHandler(UserName, nameBeforeUpdate);
+            }
+            return message;
+        }
+
+        public static void UpdateUser(String UserName, DateTime DOB, String gender, String address, String password, String phone, int UserID)
+        {
+            UserHandler.UpdateUser(UserName, DOB, gender, address, password, phone, UserID);
         }
     }
 

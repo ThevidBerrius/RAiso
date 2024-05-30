@@ -42,13 +42,13 @@ namespace LabProjectRAiso.Views.Pages.Guest
         protected global::System.Web.UI.WebControls.Label Lbl_DOB;
 
         /// <summary>
-        /// Calendar_DOB control.
+        /// TBox_DOB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar Calendar_DOB;
+        protected global::System.Web.UI.WebControls.TextBox TBox_DOB;
 
         /// <summary>
         /// Lbl_Gender control.

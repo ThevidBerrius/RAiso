@@ -42,13 +42,13 @@ namespace LabProjectRAiso.Views.Pages
         protected global::System.Web.UI.WebControls.Label Lbl_DOB;
 
         /// <summary>
-        /// Calendar_DOB control.
+        /// TBox_DOB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar Calendar_DOB;
+        protected global::System.Web.UI.WebControls.TextBox TBox_DOB;
 
         /// <summary>
         /// Lbl_Gender control.
@@ -76,6 +76,24 @@ namespace LabProjectRAiso.Views.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton Radio_Female;
+
+        /// <summary>
+        /// Lbl_Address control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Lbl_Address;
+
+        /// <summary>
+        /// TBox_Address control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TBox_Address;
 
         /// <summary>
         /// Lbl_Password control.

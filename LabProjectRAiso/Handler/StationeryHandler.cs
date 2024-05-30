@@ -31,10 +31,17 @@ namespace LabProjectRAiso.Handler
         {
             MsStationery stationery = StationeryRepository.FindStationery(id);
             List<Cart> cart = CartRepository.GetCartByStationeryID(id);
+            List<TransactionDetail> detail = TransactionRepository.GetDetailByStationeryID(id);
             foreach (Cart carts in cart)
             {
                 CartRepository.DeleteCart(carts);
             }
+
+            foreach (TransactionDetail details in detail)
+            {
+                TransactionRepository.DeleteDetail(details);
+            }
+
             StationeryRepository.DeleteStationery(stationery);
         }
 

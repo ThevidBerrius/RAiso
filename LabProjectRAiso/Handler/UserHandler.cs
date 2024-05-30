@@ -13,7 +13,7 @@ namespace LabProjectRAiso.Handler
         public static String LoginHandler(String name, String password)
         {
             MsUser user = UserRepository.GetUser(name, password);
-            return user != null ? "" : "Username or Password is incorrect";
+            return user != null ? "Success" : "Username / Password is incorrect";
         }
 
         public static String RegisterHandler(String username)
@@ -45,5 +45,22 @@ namespace LabProjectRAiso.Handler
             return user;
         }
 
+        public static String UpdateHandler(String name, String nameBeforeUpdated)
+        {
+            MsUser user = UserRepository.GetUserByUserName(name);
+            if(name.Equals(nameBeforeUpdated))
+            {
+                return "Success";
+            }
+            else
+            {
+                return user == null ? "Success" : "Username already exists";
+            }
+        }
+
+        public static void UpdateUser(String username, DateTime DOB, String gender, String address, String password, String phone, int UserID)
+        {
+            UserRepository.UpdateUser(username, DOB, gender, address, password, phone, UserID);
+        }
     }
 }

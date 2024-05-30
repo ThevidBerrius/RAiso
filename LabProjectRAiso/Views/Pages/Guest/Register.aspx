@@ -11,7 +11,7 @@
         </div>
         <div>
             <asp:Label ID="Lbl_DOB" runat="server" Text="Date of Birth"></asp:Label>
-            <asp:Calendar ID="Calendar_DOB" runat="server"></asp:Calendar>
+            <asp:TextBox ID="TBox_DOB" runat="server" TextMode="Date"></asp:TextBox>
         </div>
         <div>
             <asp:Label ID="Lbl_Gender" runat="server" Text="Gender"></asp:Label>

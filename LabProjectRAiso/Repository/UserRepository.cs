@@ -45,5 +45,17 @@ namespace LabProjectRAiso.Repository
                     where x.UserID == ID
                     select x).FirstOrDefault();
         }
+
+        public static void UpdateUser(String name, DateTime DOB, String gender, String address, String password, String phone, int UserID)
+        {
+            MsUser user = db.MsUsers.Find(UserID);
+            user.UserName = name;
+            user.UserDOB = DOB;
+            user.UserGender = gender;
+            user.UserAddress = address;
+            user.UserPassword = password;
+            user.UserPhone = phone;
+            db.SaveChanges();
+        }
     }
 }

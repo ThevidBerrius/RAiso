@@ -21,7 +21,7 @@ namespace LabProjectRAiso.Views.Pages.Guest
         protected void Btn_Register_Click(object sender, EventArgs e)
         {
             string name = TBox_Name.Text;
-            DateTime DOB = Calendar_DOB.SelectedDate;
+            string DOB = TBox_DOB.Text;
             string gender = Radio_Male.Checked ? "Male" : Radio_Female.Checked ? "Female" : "";
             string address = TBox_Address.Text;
             string password = TBox_Password.Text;
@@ -30,7 +30,7 @@ namespace LabProjectRAiso.Views.Pages.Guest
             Lbl_Status.Text  = UserController.RegisterValidation(name, DOB, gender, address, password, phone);
             if (Lbl_Status.Text.Equals("Success"))
             {
-                UserController.InsertUser(name, DOB, gender, address, password, phone);
+                UserController.InsertUser(name, DateTime.Parse(DOB), gender, address, password, phone);
                 Response.Redirect("~/Views/Pages/Home.aspx");
             }
 
