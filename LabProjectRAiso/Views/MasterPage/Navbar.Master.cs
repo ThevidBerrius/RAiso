@@ -23,10 +23,12 @@ namespace LabProjectRAiso.Views.MasterPage
                 Btn_Register.Visible = false;
                 Btn_Profile.Visible = true;
                 Btn_Logout.Visible = true;
+
                 if (role.Equals("Admin"))
                 {
                     Btn_Report.Visible = true;
                 }
+
                 else if (role.Equals("Customer"))
                 {
                     Btn_Transaction.Visible = true;
@@ -53,6 +55,7 @@ namespace LabProjectRAiso.Views.MasterPage
         protected void Btn_Report_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/Views/Pages/Admin/TransactionReport.aspx");
+            // Not Created Yet Transaction Report Page
         }
 
         protected void Btn_Login_Click(object sender, EventArgs e)

@@ -29,8 +29,11 @@ namespace LabProjectRAiso.Views.Pages.Customer
                 }
                 GVBind();
                 List<Cart> carts = CartController.GetCarts(Convert.ToInt32(Session["user"]));
-                
-                if (carts.Count == 0) Btn_Checkout.Visible = false;
+
+                if (carts.Count == 0)
+                {
+                    Btn_Checkout.Visible = false;
+                }
             }
         }
 
@@ -38,7 +41,8 @@ namespace LabProjectRAiso.Views.Pages.Customer
         {
             List<Cart> carts = CartController.GetCarts(Convert.ToInt32(Session["user"]));
 
-            List<dynamic> cartData = new List<dynamic>();  
+            List<dynamic> cartData = new List<dynamic>();
+
             foreach (var cart in carts)
             {
                 MsStationery stationery = StationeryController.GetStationery(cart.StationeryID);
@@ -57,7 +61,7 @@ namespace LabProjectRAiso.Views.Pages.Customer
         {
             Button button = (Button)sender;
             GridViewRow updateRow = (GridViewRow)button.NamingContainer;
-            string name  = updateRow.Cells[0].Text;
+            string name = updateRow.Cells[0].Text;
 
             int userID = Convert.ToInt32(Session["user"]);
             int stationeryID = StationeryController.GetIDByStationeryName(name);
