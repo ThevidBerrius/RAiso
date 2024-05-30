@@ -30,5 +30,5 @@
         <asp:TextBox ID="TBox_Phone" runat="server"></asp:TextBox>
     </div>
     <asp:Label ID="Lbl_Error" runat="server" Text=""></asp:Label>
-    <asp:Button ID="Btn_Update" runat="server" Text="Update" />
+    <asp:Button ID="Btn_Update" runat="server" Text="Update" OnClick="Btn_Update_Click"/>
 </asp:Content>
