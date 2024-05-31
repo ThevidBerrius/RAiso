@@ -23,8 +23,8 @@ namespace LabProjectRAiso.Views.Pages
                         GV_Stationery.Columns[3].Visible = true;
                         Btn_Insert.Visible = true;
                     }
-                    GVBind();
                 }
+                GVBind();
             }
         }
 
