@@ -89,6 +89,7 @@
       <DependentUpon>DatabaseModel.edmx</DependentUpon>
       <LastGenOutput>DatabaseModel.cs</LastGenOutput>
     </Content>
+    <Content Include="CSS\Style.css" />
     <Content Include="Views\Pages\Admin\InsertStationery.aspx" />
     <Content Include="Views\Pages\Admin\UpdateStationery.aspx" />
     <Content Include="Views\Pages\Customer\CartPage.aspx" />

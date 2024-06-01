@@ -2,17 +2,19 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1>Transaction History</h1>
-    <asp:GridView ID="GV_History" runat="server" AutoGenerateColumns="False">
-        <Columns>
-            <asp:BoundField DataField="TransactionID" HeaderText="Transaction ID" SortExpression="TransactionID" />
-            <asp:BoundField DataField="TransactionDate" HeaderText="Transaction Date" SortExpression="TransactionDate" />
-            <asp:BoundField DataField="UserName" HeaderText="Name" SortExpression="UserName" />         
-            <asp:TemplateField HeaderText="Action">
-                <ItemTemplate>
-                    <asp:Button ID="Btn_Detail" runat="server" Text="Detail" OnClick="Btn_Detail_Click"/>
-                </ItemTemplate>
-            </asp:TemplateField>
-        </Columns>
-    </asp:GridView>
+    <div class="homeSection">
+        <h1>Transaction History</h1>
+        <asp:GridView ID="GV_History" CssClass="gridview-padding" runat="server" AutoGenerateColumns="False">
+            <Columns>
+                <asp:BoundField DataField="TransactionID" HeaderText="Transaction ID" SortExpression="TransactionID" />
+                <asp:BoundField DataField="TransactionDate" HeaderText="Transaction Date" SortExpression="TransactionDate" />
+                <asp:BoundField DataField="UserName" HeaderText="Name" SortExpression="UserName" />         
+                <asp:TemplateField HeaderText="Action">
+                    <ItemTemplate>
+                        <asp:Button ID="Btn_Detail" runat="server" Text="Detail" OnClick="Btn_Detail_Click"/>
+                    </ItemTemplate>
+                </asp:TemplateField>
+            </Columns>
+        </asp:GridView>
+    </div>
 </asp:Content>

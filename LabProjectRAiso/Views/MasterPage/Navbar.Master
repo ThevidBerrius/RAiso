@@ -5,23 +5,25 @@
 <html>
 <head runat="server">
     <title>RAiso</title>
+    <link href="../../CSS/Style.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <div>
-                <asp:Button ID="Btn_Home" runat="server" Text="Home" OnClick="Btn_Home_Click" />
-                <asp:Button ID="Btn_Cart" runat="server" Text="Cart" OnClick="Btn_Cart_Click" Visible="false"/>
-                <asp:Button ID="Btn_Transaction" runat="server" Text="Transaction" OnClick="Btn_Transaction_Click" Visible="false"/>
-                <asp:Button ID="Btn_Report" runat="server" Text="Transaction Report"  OnClick="Btn_Report_Click" Visible="false"/>
+        <div class="nav">
+            <div class="navKiri">
+                <h1 class="raiso">RAiso</h1>
+                <asp:Button class="navButton" ID="Btn_Home" runat="server" Text="Home" OnClick="Btn_Home_Click" />
+                <asp:Button class="navButton" ID="Btn_Cart" runat="server" Text="Cart" OnClick="Btn_Cart_Click" Visible="false"/>
+                <asp:Button class="navButton" ID="Btn_Transaction" runat="server" Text="Transaction" OnClick="Btn_Transaction_Click" Visible="false"/>
+                <asp:Button class="navButton" ID="Btn_Report" runat="server" Text="Transaction Report"  OnClick="Btn_Report_Click" Visible="false"/>
             </div>
-            <div>
-                <asp:Button ID="Btn_Login" runat="server" Text="Login" OnClick="Btn_Login_Click" />
-                <asp:Button ID="Btn_Register" runat="server" Text="Register" OnClick="Btn_Register_Click"/>
-                <asp:Button ID="Btn_Profile" runat="server" Text="Update Profile" OnClick="Btn_Profile_Click" Visible="false"/>
-                <asp:Button ID="Btn_Logout" runat="server" Text="Logout" OnClick="Btn_Logout_Click" Visible="false"/>
+            <div class="navKanan">
+                <asp:Button class="navButton" ID="Btn_Login" runat="server" Text="Login" OnClick="Btn_Login_Click" />
+                <asp:Button class="navButton" ID="Btn_Register" runat="server" Text="Register" OnClick="Btn_Register_Click"/>
+                <asp:Button class="navButton" ID="Btn_Profile" runat="server" Text="Update Profile" OnClick="Btn_Profile_Click" Visible="false"/>
+                <asp:Button class="navButton" ID="Btn_Logout" runat="server" Text="Logout" OnClick="Btn_Logout_Click" Visible="false"/>
             </div>
         </div>
         <div>

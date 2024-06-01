@@ -51,6 +51,15 @@ namespace LabProjectRAiso.Views.Pages
         protected global::System.Web.UI.WebControls.TextBox TBox_Price;
 
         /// <summary>
+        /// Lbl_Quantity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Lbl_Quantity;
+
+        /// <summary>
         /// TBox_Quantity control.
         /// </summary>
         /// <remarks>

@@ -3,10 +3,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div>
+    <div class="homeSection">
         <h1>Cart</h1>
         <div>
-            <asp:GridView ID="GV_Cart" runat="server" AutoGenerateColumns="False">
+            <asp:GridView ID="GV_Cart" runat="server" CssClass="gridview-padding" AutoGenerateColumns="False">
                 <Columns>
                     <asp:BoundField DataField="StationeryName" HeaderText="Name" SortExpression="StationeryName" />
                     <asp:BoundField DataField="StationeryPrice" HeaderText="Price" SortExpression="StationeryPrice" />
@@ -20,6 +20,6 @@
                 </Columns>
             </asp:GridView>
         </div>
-        <asp:Button ID="Btn_Checkout" runat="server" Text="Checkout" OnClick="Btn_Checkout_Click" />
+        <asp:Button CssClass="updateButton" ID="Btn_Checkout" runat="server" Text="Checkout" OnClick="Btn_Checkout_Click" />
     </div>
 </asp:Content>
