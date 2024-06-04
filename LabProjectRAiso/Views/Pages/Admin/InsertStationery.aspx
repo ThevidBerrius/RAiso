@@ -10,7 +10,7 @@
         </div>
         <div>
             <asp:Label ID="Lbl_Price" runat="server" Text="Price: "></asp:Label>
-            <asp:TextBox ID="TBox_Price" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TBox_Price" runat="server" TextMode="Number"></asp:TextBox>
         </div>
         <asp:Label class="errorLabel" ID="Lbl_Error" runat="server" Text=""></asp:Label>
         <asp:Button class="updateButton" ID="Btn_Insert" runat="server" Text="Insert"  OnClick="Btn_Insert_Click"/>

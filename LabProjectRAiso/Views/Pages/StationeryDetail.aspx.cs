@@ -20,12 +20,14 @@ namespace LabProjectRAiso.Views.Pages
                     String role = UserController.GetUserRole(Session["user"].ToString());
                     if (role.Equals("Admin"))
                     {
+                        Lbl_Quantity.Visible = false;
                         TBox_Quantity.Visible = false;
                         Btn_Add.Visible = false;
                     }
                 }
                 else
                 {
+                    Lbl_Quantity.Visible = false;
                     TBox_Quantity.Visible = false;
                     Btn_Add.Visible = false;
                 }
@@ -55,7 +57,7 @@ namespace LabProjectRAiso.Views.Pages
                                          Convert.ToInt32(Request["id"]),
                                          Convert.ToInt32(TBox_Quantity.Text));
 
-                Lbl_Error.Text = "Succes Add to Cart";
+                Lbl_Error.Text = "Success Add to Cart";
                 TBox_Quantity.Text = "";
             }
             
