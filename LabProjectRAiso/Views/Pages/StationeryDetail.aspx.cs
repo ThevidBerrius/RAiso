@@ -18,6 +18,7 @@ namespace LabProjectRAiso.Views.Pages
                 if (Session["user"] != null)
                 {
                     String role = UserController.GetUserRole(Session["user"].ToString());
+                    
                     if (role.Equals("Admin"))
                     {
                         Lbl_Quantity.Visible = false;

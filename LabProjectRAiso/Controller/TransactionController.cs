@@ -23,5 +23,10 @@ namespace LabProjectRAiso.Controller
         {
             return TransactionsHandler.GetDetail(transactionID);
         }
+
+        public static List<TransactionHeader> GetAllTransaction()
+        {
+            return TransactionsHandler.GetAllTransactions();
+        }
     }
 }

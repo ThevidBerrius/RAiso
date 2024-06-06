@@ -47,5 +47,10 @@ namespace LabProjectRAiso.Handler
             return detail;
         }
 
+        public static List<TransactionHeader> GetAllTransactions()
+        {
+            return TransactionRepository.GetAllTransactions();
+        }
+
     }
 }

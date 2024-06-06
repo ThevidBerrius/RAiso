@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Web;
 
 namespace LabProjectRAiso.Repository
@@ -39,11 +40,11 @@ namespace LabProjectRAiso.Repository
             db.SaveChanges();
         }
 
-        public static List<TransactionDetail> GetDetailByStationeryID (int stationeryID)
+        public static List<TransactionDetail> GetDetailByStationeryID(int stationeryID)
         {
             return (from x in db.TransactionDetails
                     where x.StationeryID == stationeryID
-                    select x).ToList ();
+                    select x).ToList();
         }
 
         public static void DeleteHeader(int TransactionID)
@@ -59,6 +60,16 @@ namespace LabProjectRAiso.Repository
             db.TransactionDetails.Remove(detail);
             DeleteHeader(detail.TransactionID);
             db.SaveChanges();
+        }
+
+        public static List<TransactionHeader> GetAllTransactions()
+        {
+            var allTransactions = db.TransactionHeaders
+                .Include("TransactionDetails")
+                .Include("MsStationery")
+                .ToList();
+
+            return allTransactions;
         }
     }
 }
