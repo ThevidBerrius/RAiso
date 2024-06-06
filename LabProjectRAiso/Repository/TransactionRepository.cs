@@ -26,11 +26,11 @@ namespace LabProjectRAiso.Repository
                     select x).FirstOrDefault();
         }
 
-        public static TransactionDetail GetDetail(int transactionID)
+        public static List<TransactionDetail> GetDetail(int transactionID)
         {
             return (from x in db.TransactionDetails
                     where x.TransactionID == transactionID
-                    select x).FirstOrDefault();
+                    select x).ToList();
         }
 
         public static void InsertTransaction(TransactionHeader header, TransactionDetail detail)

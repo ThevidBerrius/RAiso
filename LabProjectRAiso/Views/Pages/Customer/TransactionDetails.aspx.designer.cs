@@ -7,19 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LabProjectRAiso.Views.Pages.Admin
+namespace LabProjectRAiso.Views.Pages.Customer
 {
 
 
-    public partial class TransactionReport
+    public partial class TransactionDetails
     {
 
         /// <summary>
-        /// CrystalReportViewer1 control.
+        /// GV_Detail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GV_Detail;
     }
 }

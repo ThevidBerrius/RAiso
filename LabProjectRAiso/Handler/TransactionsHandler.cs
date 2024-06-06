@@ -20,7 +20,7 @@ namespace LabProjectRAiso.Handler
             return TransactionRepository.GetHeader(userID, transactionID);
         }
 
-        public static TransactionDetail GetDetail(int transactionID)
+        public static List<TransactionDetail> GetDetail(int transactionID)
         {
             return TransactionRepository.GetDetail(transactionID);
         }
