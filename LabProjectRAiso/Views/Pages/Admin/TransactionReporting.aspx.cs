@@ -75,7 +75,6 @@ namespace LabProjectRAiso.Views.Pages.Admin
                     newDetail["Quantity"] = det.Quantity;
                     newDetail["StationeryPrice"] = stationery.StationeryPrice;
                     newDetail["SubTotalValue"] = TransactionController.GetSubTotal(stationery.StationeryPrice, det.Quantity);
-
                     detail.Rows.Add(newDetail);
                 }
             }
