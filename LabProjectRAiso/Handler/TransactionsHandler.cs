@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.UI.WebControls.WebParts;
 
 namespace LabProjectRAiso.Handler
 {
@@ -27,11 +28,12 @@ namespace LabProjectRAiso.Handler
 
         public static void CheckoutItem(List<Cart> carts)
         {
+            TransactionHeader header = CheckoutHeaderHandler(carts[0].UserID);
+            TransactionRepository.InsertTransactionHeader(header);
             foreach (Cart cart in carts)
             {
-                TransactionHeader header = CheckoutHeaderHandler(cart.UserID);
                 TransactionDetail detail = CheckoutDetailHandler(header.TransactionID, cart.StationeryID, cart.Quantity);
-                TransactionRepository.InsertTransaction(header, detail);
+                TransactionRepository.InsertTransactionDetail(detail);
             }
         }
 

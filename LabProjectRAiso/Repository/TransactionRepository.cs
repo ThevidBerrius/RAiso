@@ -33,9 +33,14 @@ namespace LabProjectRAiso.Repository
                     select x).ToList();
         }
 
-        public static void InsertTransaction(TransactionHeader header, TransactionDetail detail)
+        public static void InsertTransactionHeader(TransactionHeader header)
         {
             db.TransactionHeaders.Add(header);
+            db.SaveChanges();
+        }
+
+        public static void InsertTransactionDetail(TransactionDetail detail)
+        {
             db.TransactionDetails.Add(detail);
             db.SaveChanges();
         }
