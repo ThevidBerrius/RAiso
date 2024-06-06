@@ -54,7 +54,7 @@ namespace LabProjectRAiso.Views.MasterPage
 
         protected void Btn_Report_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Views/Pages/Admin/TransactionReport.aspx");
+            Response.Redirect("~/Views/Pages/Admin/TransactionReporting.aspx");
             // Not Created Yet Transaction Report Page
         }
 

@@ -43,6 +43,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -1221,7 +1225,7 @@
       <LastGenOutput>DatabaseModel.cs</LastGenOutput>
     </Content>
     <Content Include="Views\Pages\Admin\InsertStationery.aspx" />
-    <Content Include="Views\Pages\Admin\TransactionReport.aspx" />
+    <Content Include="Views\Pages\Admin\TransactionReporting.aspx" />
     <Content Include="Views\Pages\Admin\UpdateStationery.aspx" />
     <Content Include="Views\Pages\Customer\CartPage.aspx" />
     <Content Include="Views\Pages\Customer\TransactionDetails.aspx" />
@@ -1284,6 +1288,12 @@
       <DependentUpon>DatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Repository\CartRepository.cs" />
     <Compile Include="Repository\DatabaseSingleton.cs" />
     <Compile Include="Repository\StationeryRepository.cs" />
@@ -1303,12 +1313,12 @@
     <Compile Include="Views\Pages\Admin\InsertStationery.aspx.designer.cs">
       <DependentUpon>InsertStationery.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\Pages\Admin\TransactionReport.aspx.cs">
-      <DependentUpon>TransactionReport.aspx</DependentUpon>
+    <Compile Include="Views\Pages\Admin\TransactionReporting.aspx.cs">
+      <DependentUpon>TransactionReporting.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\Pages\Admin\TransactionReport.aspx.designer.cs">
-      <DependentUpon>TransactionReport.aspx</DependentUpon>
+    <Compile Include="Views\Pages\Admin\TransactionReporting.aspx.designer.cs">
+      <DependentUpon>TransactionReporting.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Pages\Admin\UpdateStationery.aspx.cs">
       <DependentUpon>UpdateStationery.aspx</DependentUpon>
@@ -1409,9 +1419,15 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

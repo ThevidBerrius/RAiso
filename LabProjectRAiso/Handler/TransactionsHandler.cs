@@ -54,5 +54,28 @@ namespace LabProjectRAiso.Handler
             return TransactionRepository.GetAllTransactions();
         }
 
+        public static List<TransactionHeader> GetDataReport()
+        {
+            return TransactionRepository.GetDataReport();
+        }
+        public static int GetGrandTotal(int transactionID)
+        {
+            int total = 0;
+            int temp = 0;
+            List<TransactionDetail> detail = TransactionRepository.GetDetail(transactionID);
+            foreach(TransactionDetail details in detail)
+            {
+                MsStationery stationery = StationeryRepository.FindStationery(details.StationeryID);
+                temp = stationery.StationeryPrice * details.Quantity;
+                total += temp;
+            }
+            return total;
+        }
+
+        public static int GetSubTotal(int price, int quantity)
+        {
+            return price * quantity;
+        }
+
     }
 }

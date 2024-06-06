@@ -4,6 +4,18 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
+      <Diagram DiagramId="35a2c6b1d4644f50b030b854ebadc146" Name="Diagram1">
+        <EntityTypeShape EntityType="DatabaseModel.Cart" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.MsStationery" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.MsUser" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.TransactionDetail" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.TransactionHeader" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <AssociationConnector Association="DatabaseModel.FK_CartToMsStationery" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_CartToMsUser" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_TransactionDetailToMsStationery" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_TransactionHeaderToMsUser" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_TransactionDetailToTransactionHeader" ManuallyRouted="false" />
+      </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

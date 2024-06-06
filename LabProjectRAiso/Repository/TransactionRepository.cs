@@ -76,5 +76,10 @@ namespace LabProjectRAiso.Repository
 
             return allTransactions;
         }
+
+        public static List<TransactionHeader> GetDataReport()
+        {
+            return db.TransactionHeaders.ToList();
+        }
     }
 }

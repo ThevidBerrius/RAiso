@@ -28,5 +28,20 @@ namespace LabProjectRAiso.Controller
         {
             return TransactionsHandler.GetAllTransactions();
         }
+
+        public static int GetGrandTotal(int transactionID)
+        {
+            return TransactionsHandler.GetGrandTotal(transactionID);
+        }
+
+        public static int GetSubTotal(int price, int quantity)
+        {
+            return TransactionsHandler.GetSubTotal(price, quantity);
+        }
+
+        public static List<TransactionHeader> GetDataReport()
+        {
+            return TransactionsHandler.GetDataReport();
+        }
     }
 }
