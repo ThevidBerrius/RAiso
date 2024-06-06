@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/LabProjectRAiso/Views/Pages/Customer/TransactionDetail.aspx.cs
+/LabProjectRAiso/Views/Pages/Customer/TransactionDetail.aspx.cs
