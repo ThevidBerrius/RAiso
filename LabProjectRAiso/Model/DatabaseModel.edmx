@@ -65,7 +65,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CartToMsUser">
-          <End Role="MsUser" Type="Self.MsUser" Multiplicity="1" />
+          <End Role="MsUser" Type="Self.MsUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="Cart" Type="Self.Cart" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="MsUser">
@@ -89,7 +91,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_TransactionDetailToTransactionHeader">
-          <End Role="TransactionHeader" Type="Self.TransactionHeader" Multiplicity="1" />
+          <End Role="TransactionHeader" Type="Self.TransactionHeader" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="TransactionDetail" Type="Self.TransactionDetail" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TransactionHeader">
@@ -214,7 +218,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CartToMsUser">
-          <End Role="MsUser" Type="Self.MsUser" Multiplicity="1" />
+          <End Role="MsUser" Type="Self.MsUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="Cart" Type="Self.Cart" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="MsUser">
@@ -250,7 +256,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_TransactionDetailToTransactionHeader">
-          <End Role="TransactionHeader" Type="Self.TransactionHeader" Multiplicity="1" />
+          <End Role="TransactionHeader" Type="Self.TransactionHeader" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="TransactionDetail" Type="Self.TransactionDetail" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TransactionHeader">

@@ -1382,13 +1382,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Model\DatabaseModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DatabaseModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Model\DatabaseModel.edmx.diagram">
-      <DependentUpon>DatabaseModel.edmx</DependentUpon>
-    </Content>
     <Content Include="Dataset\ReportDataset.xsc">
       <DependentUpon>ReportDataset.xsd</DependentUpon>
     </Content>
@@ -1399,6 +1392,13 @@
     </None>
     <Content Include="Dataset\ReportDataset.xss">
       <DependentUpon>ReportDataset.xsd</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Model\DatabaseModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DatabaseModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Model\DatabaseModel.edmx.diagram">
+      <DependentUpon>DatabaseModel.edmx</DependentUpon>
     </Content>
     <None Include="packages.config" />
     <Content Include="Views\MasterPage\Navbar.Master" />
