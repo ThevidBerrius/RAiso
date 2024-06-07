@@ -13,7 +13,7 @@
     <form id="form1" runat="server">
         <div class="nav">
             <div class="navKiri">
-                <h1 class="raiso">RAiso</h1>
+                <h1 class="raiso">RAiso 🛒</h1>
                 <asp:Button class="navButton" ID="Btn_Home" runat="server" Text="Home" OnClick="Btn_Home_Click" />
                 <asp:Button class="navButton" ID="Btn_Cart" runat="server" Text="Cart" OnClick="Btn_Cart_Click" Visible="false"/>
                 <asp:Button class="navButton" ID="Btn_Transaction" runat="server" Text="Transaction" OnClick="Btn_Transaction_Click" Visible="false"/>

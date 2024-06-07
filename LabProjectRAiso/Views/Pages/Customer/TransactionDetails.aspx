@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <div class="homeSection">
         <h1>Transaction Detail</h1>
-        <asp:GridView ID="GV_Detail" runat="server" AutoGenerateColumns="False">
+        <asp:GridView ID="GV_Detail" CssClass="gridview-padding" runat="server" AutoGenerateColumns="False">
             <Columns>
                 <asp:BoundField DataField="StationeryName" HeaderText="Stationery Name" SortExpression="StationeryName" />
                 <asp:BoundField DataField="StationeryPrice" HeaderText="Stationery Price" SortExpression="StationeryPrice" />

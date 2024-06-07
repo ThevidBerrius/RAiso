@@ -33,8 +33,8 @@
                 <asp:Label ID="Lbl_Phone" runat="server" Text="Phone"></asp:Label>
                 <asp:TextBox CssClass="TextBox" ID="TBox_Phone" runat="server"></asp:TextBox>
             </div>
-            <asp:Label CssClass="errorLabel" ID="Lbl_Status" runat="server" Text=""></asp:Label>
             <asp:Button CssClass="updateButton" ID="Btn_Register" runat="server" Text="Register" OnClick="Btn_Register_Click"/>
         </div>
+                    <asp:Label CssClass="errorLabel" ID="Lbl_Status" runat="server" Text=""></asp:Label>
     </div>
 </asp:Content>

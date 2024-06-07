@@ -101,7 +101,7 @@ namespace LabProjectRAiso.Controller
             }
             else if(!Regex.IsMatch(password, @"^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]+$"))
             {
-                message = "Password must be alphanumeric and contain at least one letter and one number";
+                message = "Password must be alphanumeric";
             }
             return message;
         }
